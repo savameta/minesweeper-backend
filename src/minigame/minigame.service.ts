@@ -21,8 +21,10 @@ import {
 } from 'src/schemas/minigame-history.schema';
 import { Minesweeper } from './contracts/Minesweeper';
 
-const MINESWEEPER_CONTRACT = '0x65fa3ccEd20Ca0f60bEcAb3C3d9546d289F67a64';
-const BSC_RPC_URL = 'https://data-seed-prebsc-1-s1.binance.org:8545';
+const MINESWEEPER_CONTRACT = '0x217a8f17A615DD19f3ef02E5F7cD3b14572554CF';
+
+const BSC_RPC_URL =
+  'https://wispy-fluent-surf.ethereum-sepolia.quiknode.pro/e06c434a3922afd7af47f0d611b8a837787c5b08';
 @Injectable()
 export class MinigameService implements OnModuleInit {
   contract: Minesweeper;
@@ -63,7 +65,6 @@ export class MinigameService implements OnModuleInit {
   }
   async getMiniGameHistory(): Promise<any> {
     return await this.miniGameHistoryModel.find({});
-   
   }
   async openCell(input: any): Promise<any> {
     try {
